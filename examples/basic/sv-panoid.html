@@ -55,6 +55,7 @@
 			<p><i>Try 3toTZ-zA0QH6HRfvol1QPA</i></p>
 			<form id="PanoIdForm">
 				<input type="text" id="PanoIdInput" />
+				<input type="text" size="1" value="5" id="PanoZoom" />
 				<input type="submit" id="PanoIdFormSubmit" />
 			</form>
 			<div id="progressDiv" ></div>
@@ -109,7 +110,7 @@
 		
 		PanoIdForm.addEventListener( 'submit', function( e ) {
 			showProgress( 'Loading ' + PanoIdInput.value );
-			l.load( PanoIdInput.value, 2 );
+			l.load( PanoIdInput.value, parseInt(PanoZoom.value) );
 			e.preventDefault();
 		} )
 
