@@ -266,11 +266,11 @@
 
     this.service = PANOMNOM.Utils.getGoogleStreetViewService();
 
-    this.levelsW = [1, 2, 4, 8, 16, 32];
-    this.levelsH = [1, 1, 2, 4, 8, 16];
+    this.levelsW = [1, 2, 4, 8, 16, 26, 32];
+    this.levelsH = [1, 1, 2, 4, 8, 13, 16];
 
-    this.widths = [512, 1024, 2048, 4096, 8192, 16384];
-    this.heights = [416, 512, 1024, 2048, 4096, 8192];
+    this.widths = [512, 1024, 2048, 4096, 8192, 13312, 16384];
+    this.heights = [416, 512, 1024, 2048, 4096, 6656, 8192];
 
     this.zoom = 1;
 
