@@ -266,11 +266,39 @@
 
     this.service = PANOMNOM.Utils.getGoogleStreetViewService();
 
-    this.levelsW = [1, 2, 4, 8, 16, 26, 32];
-    this.levelsH = [1, 1, 2, 4, 8, 13, 16];
+    this.levelsW = [
+      1,
+      2,
+      4,
+      8,
+      16,
+      32
+    ];
+    this.levelsH = [
+      1,
+      1,
+      2,
+      4,
+      8,
+      16
+    ];
 
-    this.widths = [512, 1024, 2048, 4096, 8192, 13312, 16384];
-    this.heights = [416, 512, 1024, 2048, 4096, 6656, 8192];
+    this.widths = [
+      512, //
+      1024, //
+      2048, //
+      4096, //
+      8192, //
+      16384 //
+    ];
+    this.heights = [
+      416,
+      512,
+      1024,
+      2048,
+      4096,
+      8192
+    ];
 
     this.zoom = 1;
 
@@ -305,11 +333,9 @@
         //var url = 'https://cbks2.google.com/cbk?cb_client=maps_sv.tactile&authuser=0&hl=en&panoid=' + id + '&output=tile&zoom=' + zoom + '&x=' + x + '&y=' + y + '&' + Date.now();
 
         this.stitcher.addTileTask({
-
           url: url,
           x: x * 512,
-          y: y * 512,
-
+          y: y * 512
         });
       }
     }
@@ -345,10 +371,14 @@
       }
 
       this.metadata = result;
+      
+      
+      
+      
       this.dispatchEvent({ type: 'data', message: result });
 
       this.stitcher.processQueue();
-      //console.log( result );
+      console.log( 'Panorama information:', result );
 
     }.bind(this));
   }
