@@ -381,7 +381,7 @@
       this.dispatchEvent({ type: 'data', message: result });
 
       this.stitcher.processQueue();
-      //console.log( result );
+      console.log( 'Panorama metadata:', result );
 
     }.bind(this));
   }
