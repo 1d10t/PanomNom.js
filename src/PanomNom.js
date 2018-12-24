@@ -349,8 +349,8 @@
       
       do{
         if(level){
-          w /= 2 * level;
-          h /= 2 * level;
+          w /= 2;
+          h /= 2;
         }
         this.widths.unshift(w);
         this.heights.unshift(h);
